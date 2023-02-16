@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../styles/colors.dart';
-import '../tabs/home_tab.dart';
-import '../tabs/profile_tab.dart';
-import '../tabs/schedule_tab.dart';
+import 'tabs/home_tab.dart';
+import 'tabs/profile_tab.dart';
+import 'tabs/schedule_tab.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

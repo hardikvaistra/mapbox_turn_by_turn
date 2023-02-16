@@ -5,7 +5,7 @@ import 'package:mapbox_turn_by_turn/helpers/mapbox_handler.dart';
 import 'package:mapbox_turn_by_turn/helpers/shared_prefs.dart';
 
 import '../helpers/commons.dart';
-import '../widgets/review_ride_bottom_sheet.dart';
+import 'widgets/review_ride_bottom_sheet.dart';
 
 class ReviewRide extends StatefulWidget {
   final Map modifiedResponse;

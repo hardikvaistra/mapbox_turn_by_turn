@@ -139,7 +139,6 @@ class _BookAppointmentState extends State<BookAppointment> {
                     monthTextStyle: defaultMonthTextStyle.copyWith(
                         color: Colors.grey.shade600),
                     onDateChange: (date) {
-                      // New date selected
                       setState(() {});
                     },
                   ),

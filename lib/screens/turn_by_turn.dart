@@ -6,7 +6,7 @@ import 'package:mapbox_gl/mapbox_gl.dart';
 import 'package:navigation_with_mapbox/navigation_with_mapbox.dart';
 // import 'package:navigation_with_mapbox/navigation_with_mapbox.dart';
 
-import '../ui/rate_ride.dart';
+import 'ui/rate_ride.dart';
 
 class TurnByTurn extends StatefulWidget {
   final LatLng source;
@@ -143,22 +143,23 @@ class _TurnByTurnState extends State<TurnByTurn> {
     if (!mounted) return;
 
     await _navigationWithMapboxPlugin.startNavigation(
-        origin: WayPoint(
-            latitude: widget.source.latitude,
-            longitude: widget.source.longitude),
-        destination: WayPoint(
-            latitude: widget.destination.latitude,
-            longitude: widget.destination.longitude),
-        setDestinationWithLongTap: false,
-        simulateRoute: true,
-        msg: 'On The Way', // optional
-        profile: '', // optional, default: driving, others: walking, cycling
-        style:
-            '', // optional, default: streets, others: dark, light, traffic_day, traffic_night, satellite, satellite_streets, outdoors
-        voiceUnits: '', // optional, default: metric
-        language: '', // optional, default: en
-        alternativeRoute: true // optional, default: false
-        );
+      origin: WayPoint(
+        latitude: widget.source.latitude,
+        longitude: widget.source.longitude,
+      ),
+      destination: WayPoint(
+        latitude: widget.destination.latitude,
+        longitude: widget.destination.longitude,
+      ),
+      setDestinationWithLongTap: false,
+      simulateRoute: true,
+      msg: 'On The Way', // optional
+      profile: '', // optional, default: driving, others: walking, cycling
+      style:'', // optional, default: streets, others: dark, light, traffic_day, traffic_night, satellite, satellite_streets, outdoors
+      voiceUnits: '', // optional, default: metric
+      language: '', // optional, default: en
+      alternativeRoute: true, // optional, default: false
+    );
 
     // var options = MapboxOptions(
     //   // origin refers to the user's starting point at the time of starting the navigation

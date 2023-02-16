@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mapbox_turn_by_turn/screens/forgot_password.dart';
 import 'package:mapbox_turn_by_turn/screens/login.dart';
 import 'package:mapbox_turn_by_turn/screens/register.dart';
-import 'package:mapbox_turn_by_turn/ui/splash.dart';
+import 'package:mapbox_turn_by_turn/screens/ui/splash.dart';
 import '../screens/doctor_detail.dart';
 import '../screens/home.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mapbox_turn_by_turn/widgets/endpoints_card.dart';
-import 'package:mapbox_turn_by_turn/widgets/search_listview.dart';
+import 'package:mapbox_turn_by_turn/screens/widgets/endpoints_card.dart';
+import 'package:mapbox_turn_by_turn/screens/widgets/search_listview.dart';
 
 class PrepareRide extends StatefulWidget {
   const PrepareRide({Key? key}) : super(key: key);

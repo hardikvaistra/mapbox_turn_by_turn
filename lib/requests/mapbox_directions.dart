@@ -4,6 +4,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
 
 import '../helpers/dio_exceptions.dart';
+import '../screens/ui/splash.dart';
 
 String baseUrl = 'https://api.mapbox.com/directions/v5/mapbox';
 String accessToken = dotenv.env['MAPBOX_ACCESS_TOKEN']!;
@@ -21,5 +22,6 @@ Future getCyclingRouteUsingMapbox(LatLng source, LatLng destination) async {
   } catch (e) {
     final errorMessage = DioExceptions.fromDioError(e as DioError).toString();
     debugPrint(errorMessage);
+    hello();
   }
 }

@@ -15,14 +15,16 @@ class _ForgotPasswordState extends State<ForgotPassword> {
 
   // Sign in button styles
   final ButtonStyle btnStyle = ElevatedButton.styleFrom(
-      backgroundColor: MyColors.primary,
-      elevation: 5.0,
-      padding: const EdgeInsets.all(10.0),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-      textStyle: const TextStyle(
-          fontSize: 18,
-          fontFamily: 'GeneralSans',
-          fontWeight: FontWeight.w500));
+    backgroundColor: MyColors.primary,
+    elevation: 5.0,
+    padding: const EdgeInsets.all(10.0),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+    textStyle: const TextStyle(
+      fontSize: 18,
+      fontFamily: 'GeneralSans',
+      fontWeight: FontWeight.w500,
+    ),
+  );
 
   // Email input field widget
   Widget _buildEmailField() {
@@ -50,8 +52,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     );
   }
 
-  // Sign in button widget
+  //Sign in button widget
   Widget _buildPasswordResentButton() {
+    //
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20.0),
       width: double.infinity,
@@ -86,8 +89,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             height: double.infinity,
             child: SingleChildScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 60.0),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20.0,
+                vertical: 60.0,
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -107,13 +112,16 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     ),
                   ),
                   const Padding(
-                    padding: EdgeInsets.only(top: 20, bottom: 40.0),
-                    child: Text('Reset your password',
-                        style: TextStyle(
-                            color: Colors.black87,
-                            fontFamily: 'GeneralSans',
-                            fontSize: 26.0,
-                            fontWeight: FontWeight.w500)),
+                    padding: EdgeInsets.only(top: 20, bottom: 40),
+                    child: Text(
+                      'Reset your password',
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontFamily: 'GeneralSans',
+                        fontSize: 26.0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ),
                   Container(
                     margin: const EdgeInsets.all(20),

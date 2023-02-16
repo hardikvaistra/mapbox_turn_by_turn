@@ -30,12 +30,15 @@ class _LoginState extends State<Login> {
     ),
   );
 
+  var isHidden = false;
+
   // Email input field widget
   Widget _buildEmailField() {
     return TextFormField(
       decoration: InputDecoration(
         labelText: 'Email',
         contentPadding: const EdgeInsets.only(top: 10.0, left: 10.0),
+        labelStyle: TextStyle(color: MyColors.primary),
         // prefixIcon: Icon(Icons.email, color: Colors.black87),
         hintText: 'Enter your email',
         fillColor: Colors.white,
@@ -59,17 +62,20 @@ class _LoginState extends State<Login> {
   // Password input field widget
   Widget _buildPasswordField() {
     return TextFormField(
+      obscureText: isHidden,
       decoration: InputDecoration(
         labelText: 'Password',
-        contentPadding: const EdgeInsets.only(top: 10.0, left: 10.0),
-        // prefixIcon: Icon(Icons.lock, color: Colors.black87),
         hintText: 'Enter your password',
         fillColor: Colors.white,
+        contentPadding: const EdgeInsets.only(top: 10.0, left: 10.0),
+        labelStyle: TextStyle(color: MyColors.primary),
+        suffixIcon: InkWell(
+          onTap: () => setState(() => isHidden = !isHidden),
+          child: Icon(Icons.remove_red_eye, color: MyColors.primary),
+        ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5.0),
-          borderSide: BorderSide(
-            color: MyColors.primary,
-          ),
+          borderSide: BorderSide(color: MyColors.primary),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5.0),

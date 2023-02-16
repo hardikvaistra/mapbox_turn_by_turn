@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../styles/colors.dart';
-import '../widgets/app_banner.dart';
-import '../widgets/app_home_buttons.dart';
+import 'widgets/app_banner.dart';
+import 'widgets/app_home_buttons.dart';
 
 class Onboard extends StatefulWidget {
   const Onboard({Key? key}) : super(key: key);

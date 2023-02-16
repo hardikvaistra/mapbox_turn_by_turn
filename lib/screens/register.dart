@@ -27,6 +27,8 @@ class _RegisterState extends State<Register> {
         fontSize: 18, fontFamily: 'GeneralSans', fontWeight: FontWeight.w500),
   );
 
+  var isHidden = false;
+
   // Full name input field widget
   Widget _buildFullNameField() {
     return TextFormField(
@@ -82,12 +84,17 @@ class _RegisterState extends State<Register> {
   // Password input field widget
   Widget _buildPasswordField() {
     return TextFormField(
+      obscureText: isHidden,
       decoration: InputDecoration(
         labelText: 'Password',
         contentPadding: const EdgeInsets.only(top: 10.0, left: 10.0),
         // prefixIcon: Icon(Icons.lock, color: Colors.black87),
         hintText: 'Enter your password',
         fillColor: Colors.white,
+        suffixIcon: InkWell(
+          onTap: () => setState(() => isHidden = !isHidden),
+          child: Icon(Icons.remove_red_eye, color: MyColors.primary),
+        ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5.0),
           borderSide: BorderSide(
@@ -214,13 +221,15 @@ class _RegisterState extends State<Register> {
                   ),
                   const Padding(
                     padding: EdgeInsets.only(top: 10, bottom: 40.0),
-                    child: Text('Create account',
-                        style: TextStyle(
-                          color: Colors.black87,
-                          fontFamily: 'GeneralSans',
-                          fontSize: 22.0,
-                          fontWeight: FontWeight.w500,
-                        )),
+                    child: Text(
+                      'Register Your Account',
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontFamily: 'GeneralSans',
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ),
                   Container(
                     margin: const EdgeInsets.all(20),
